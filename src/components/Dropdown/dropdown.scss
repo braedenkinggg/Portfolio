@@ -1,0 +1,73 @@
+@import '../../variables';
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $black;
+    overflow: hidden;
+    z-index: 0;
+    height: 0;
+    transition: height .7s ease-in-out;
+
+    &_menu {
+        list-style-type: none;
+        padding: 6em 1em;
+    }
+
+    &_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+    }
+
+    &_link {
+        color: $white;
+        font-size: 2rem;
+        font-family: $secondary-font;
+        text-decoration: none;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .dropdown_menu {
+        padding: 1em 4em;
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    .dropdown_menu {
+        padding: 1em 10em;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .dropdown_menu {
+        padding: 1em 15em;
+    }
+
+    .dropdown_link {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 2240px) {
+    .dropdown_menu {
+        padding: 1em 20em;
+    }
+}
+
+@media screen and (min-width: 3240px) {
+    .dropdown_menu {
+        padding: 1em 22em;
+    }
+}

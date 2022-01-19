@@ -1,0 +1,68 @@
+@import '../../variables';
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 2em;
+
+    &_eyebrow,
+    &_title,
+    &_subtitle,
+    &_link {
+        animation: slide-in .7s cubic-bezier(.215,.61,.355,1) .25s backwards;
+    }
+
+    &_eyebrow,
+    &_title {
+        font-family: $secondary-font;
+        margin-bottom: .5em;
+    }
+    
+    &_eyebrow {
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    &_title {
+        font-size: 2.5rem;
+    }
+
+    &_subtitle {
+        color: $gray;
+        font-weight: 400;
+        font-size: 1rem;
+        margin-bottom: 1em;
+    }
+
+    &_link {
+        color: $blue;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero_eyebrow {
+        font-size: 2.5rem;
+    }
+
+    .hero_title {
+        font-size: 3.5rem;
+    }
+
+    .hero_subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero_link {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .hero_title {
+        font-size: 4.5rem;
+    }
+}

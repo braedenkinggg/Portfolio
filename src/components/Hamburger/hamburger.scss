@@ -1,0 +1,40 @@
+@import '../../variables';
+
+.hamburger {
+    cursor: pointer;
+    animation: fade-in 1s cubic-bezier(.215,.61,.355,1);
+
+    span {
+        display: block;
+        background-color: $white;
+        height: 2px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            transition: width .2s;
+        }
+
+        &:nth-child(1) {
+            width: 25px;
+        }
+
+        &:nth-child(2) {
+            margin: 6px 0;
+            width: 20px;
+        }
+
+        &:nth-child(3) {
+            width: 15px;
+        }
+    }
+
+    &:hover {
+        span:nth-child(2){
+            width: 22px
+        }
+
+        span:nth-child(3) {
+            width: 17px;
+        }
+    }
+}

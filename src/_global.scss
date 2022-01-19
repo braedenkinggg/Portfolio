@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap');
+@import './_variables.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $black;
+    color: $white;
+    font: 400 calc(1em + 1vw) $primary-font;
+}
+
+h1,
+h2,
+h3 {
+    display: block;
+    margin-bottom: .5em;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.max-width {
+    max-width: 25.1em;
+    margin: 0 auto;
+}
+
+.dot {
+    display: inline-block;
+    color: $blue;
+    margin-left: 2px;
+}
+
+.wave,
+.scratch {
+    display: inline-block;
+    position: relative;
+    z-index: -1;
+}
+
+.wave {
+    transform-origin: 70% 70%;
+    animation: wave 2s infinite;
+}
+
+.scratch {
+    animation: scratch 2s infinite;
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    } 
+
+    10%,
+    30%,
+    50% {
+        transform: rotate(10deg);
+    } 
+    
+    20%,
+    40%,
+    60% {
+        transform: rotate(-8deg);
+    }
+}
+
+@keyframes scratch {
+    0%,
+    100% {
+        transform: translate(0);
+    } 
+
+    10%,
+    30%,
+    50% {
+        transform: translate(1.5px, 1.5px);
+    } 
+    
+    20%,
+    40%,
+    60% {
+        transform: translate(-1.5px, -1.5px);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(150%);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
